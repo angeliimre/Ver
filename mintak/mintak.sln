@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mintak", "mintak\mintak.csproj", "{3CBDCB0F-CA6E-4FBE-9DC6-AA228590655D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CBDCB0F-CA6E-4FBE-9DC6-AA228590655D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CBDCB0F-CA6E-4FBE-9DC6-AA228590655D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CBDCB0F-CA6E-4FBE-9DC6-AA228590655D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CBDCB0F-CA6E-4FBE-9DC6-AA228590655D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DEEAFE6D-DEF9-4942-98B6-C06A69F2C6BC}
+	EndGlobalSection
+EndGlobal
