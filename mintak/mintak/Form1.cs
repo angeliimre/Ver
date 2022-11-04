@@ -8,15 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using mintak.Features;
+using mintak.Abstractions;
 
 namespace mintak
 {
     public partial class Form1 : Form
     {
-        private List<Ball> _balls = new List<Ball>();
-        private BallFactory _factory;
+        private List<Toy> _toys = new List<Toy>();
+        private IToyFactory _factory;
 
-        public BallFactory Factory
+        public IToyFactory Factory
         {
             get { return _factory; }
             set { _factory = value; }
@@ -30,28 +31,28 @@ namespace mintak
 
         private void createTimer_Tick(object sender, EventArgs e)
         {
-            Ball ball=Factory.CreateNew();
-            ball.Left = -ball.Width;
-            _balls.Add(ball);
-            mainPanel.Controls.Add(ball);
+            Toy toy=Factory.CreateNew();
+            toy.Left = -toy.Width;
+            _toys.Add(toy);
+            mainPanel.Controls.Add(toy);
         }
 
         private void conveyorTimer_Tick(object sender, EventArgs e)
         {
             int max = 0;
-            foreach (var item in _balls)
+            foreach (var item in _toys)
             {
-                item.MoveBall();
+                item.MoveToy();
                 if (item.Left>max)
                 {
                     max = item.Left;
                 }
             }
-            if (_balls.Count>0&&_balls[0].Left>1000)
+            if (max>1000)
             {
-                //Ball elso = _balls[0];
-                _balls.Remove(_balls[0]);
-                mainPanel.Controls.Remove(_balls[0]);
+                Toy elso = _toys[0];
+                _toys.Remove(elso);
+                mainPanel.Controls.Remove(elso);
             }
         }
     }

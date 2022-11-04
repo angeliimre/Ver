@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using mintak.Abstractions;
 
 namespace mintak.Features
 {
-    public class BallFactory
+    public class BallFactory:IToyFactory
     {
-        public Ball CreateNew() {
+        public Toy CreateNew() {
             return new Ball();
         }
     }
